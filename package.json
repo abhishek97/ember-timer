@@ -1,13 +1,13 @@
 {
   "name": "ember-timer",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "A contextual component to show a countdown timer. Uses Moment.js",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/abhishek97/ember-timer",
   "license": "MIT",
-  "author": "",
+  "author": "Abhishek Gupta",
   "directories": {
     "doc": "doc",
     "test": "tests"
