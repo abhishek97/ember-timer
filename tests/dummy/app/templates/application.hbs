@@ -1,3 +1,6 @@
-<Timer @to={{time}} as |t| >
+<Timer 
+  @to={{time}} 
+  @onEnd={{action "onEnd"}} 
+  as |t| >
   {{t.days}}: {{t.hours}}: {{t.minutes}}: {{t.seconds}}
 </Timer>
