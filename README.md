@@ -23,9 +23,13 @@ ember install ember-timer
 Usage
 ------------------------------------------------------------------------------
 The `timer` component expects a `to` argument which is Moment Object. 
+And an optional `onEnd` argument, which is called after timer ends.
 
 ```
-<Timer @to={{countToMomentObject}} as |t|/>
+<Timer 
+    @to={{countToMomentObject}} 
+    @onEnd={{action "onEnd"}}
+as |t|/>
     DaysLeft: {{t.days}}
     HoursLeft: {{t.hours}}
     MinutesLeft: {{t.minutes}}
