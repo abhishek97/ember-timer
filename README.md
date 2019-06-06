@@ -1,7 +1,7 @@
 ember-timer
 ==============================================================================
 
-[Short description of the addon.]
+A contextual component to show a countdown timer. Uses Moment.js
 
 
 Compatibility
@@ -22,9 +22,16 @@ ember install ember-timer
 
 Usage
 ------------------------------------------------------------------------------
+The `timer` component expects a `to` argument which is Moment Object. 
 
-[Longer description of how to use the addon in apps.]
-
+```
+<Timer @to={{countToMomentObject}} as |t|/>
+    DaysLeft: {{t.days}}
+    HoursLeft: {{t.hours}}
+    MinutesLeft: {{t.minutes}}
+    SecondsLeft: {{t.seconds}}
+</Timer>
+```
 
 Contributing
 ------------------------------------------------------------------------------
