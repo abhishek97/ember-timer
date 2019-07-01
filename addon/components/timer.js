@@ -10,6 +10,8 @@ import moment from 'moment';
 export default class TimerComponent extends Component {
   layout = layout
 
+  destroyed = false
+
   @computed('now', 'to')
   get hasEnded () {
     return this.to - this.now <= 0 
@@ -48,8 +50,12 @@ export default class TimerComponent extends Component {
     this.tick()
   }
 
+  willDestroyElement () {
+    this.destroyed = true
+  }
+
   tick () {
-    if (this.hasEnded) {
+    if (this.hasEnded || this.destroyed) {
       // countdown ended; call the action if available
       if (typeof this.onEnd == 'function')
         once(this.onEnd)
